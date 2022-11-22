@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "619722907185",
+    "firebase_url": "https://appentwicklungbiblio-default-rtdb.firebaseio.com",
+    "project_id": "appentwicklungbiblio",
+    "storage_bucket": "appentwicklungbiblio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619722907185:android:196edad8ad61f38cc37f10",
+        "android_client_info": {
+          "package_name": "com.example.meinebibliothek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "619722907185-1brvhvt8p513shs9erru0221ini20jmc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACBuYI9dId8gOLaE-bniQzSdmYtwJLN3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "619722907185-1brvhvt8p513shs9erru0221ini20jmc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619722907185:android:c4c864f61b367e9ec37f10",
+        "android_client_info": {
+          "package_name": "de.stud.hskl.appentwicklungbiblio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "619722907185-1brvhvt8p513shs9erru0221ini20jmc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACBuYI9dId8gOLaE-bniQzSdmYtwJLN3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "619722907185-1brvhvt8p513shs9erru0221ini20jmc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
