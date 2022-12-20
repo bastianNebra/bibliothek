@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EinfuegenActivity"
-    android:background="#6495ED"
+    android:background="@drawable/background_green"
     android:padding="30dp">
 
     <EditText

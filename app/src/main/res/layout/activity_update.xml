@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BearbeitungUndLöschActivity"
-    android:background="#6495ED"
+    android:background="@drawable/background_green"
     android:padding="30dp">
 
     <EditText
@@ -60,7 +60,7 @@
         android:layout_marginTop="230dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="250dp"
-        android:text="Update"
+        android:text="Bearbeiten"
         android:textAllCaps="false"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -74,10 +74,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
         android:layout_marginBottom="200dp"
-        android:text="Delete"
+        android:text="Löschen"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.266"

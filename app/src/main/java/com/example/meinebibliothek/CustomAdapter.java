@@ -45,20 +45,20 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CustomAdapter.MyViewHolder holder, final int position) {
-        holder.book_id_txt.setText(String.valueOf(book_id.get(position)));
-        holder.book_title_txt.setText(String.valueOf(book_title.get(position)));
-        holder.book_author_txt.setText(String.valueOf(book_author.get(position)));
-        holder.book_pages_txt.setText(String.valueOf(book_pages.get(position)));
+    public void onBindViewHolder(@NonNull CustomAdapter.MyViewHolder holder, int position) {
+        holder.book_id_txt.setText(String.valueOf(book_id.get(holder.getAdapterPosition())));
+        holder.book_title_txt.setText(String.valueOf(book_title.get(holder.getAdapterPosition())));
+        holder.book_author_txt.setText(String.valueOf(book_author.get(holder.getAdapterPosition())));
+        holder.book_pages_txt.setText(String.valueOf(book_pages.get(holder.getAdapterPosition())));
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Intent intent= new Intent(context, BearbeitungUndLöschActivity.class);
-                intent.putExtra("id", String.valueOf((book_id.get(position))));
-                intent.putExtra("title", String.valueOf((book_title.get(position))));
-                intent.putExtra("author", String.valueOf((book_author.get(position))));
-                intent.putExtra("pages", String.valueOf((book_pages.get(position))));
+                intent.putExtra("id", String.valueOf((book_id.get(holder.getAdapterPosition()))));
+                intent.putExtra("title", String.valueOf((book_title.get(holder.getAdapterPosition()))));
+                intent.putExtra("author", String.valueOf((book_author.get(holder.getAdapterPosition()))));
+                intent.putExtra("pages", String.valueOf((book_pages.get(holder.getAdapterPosition()))));
                 activity.startActivityForResult(intent, 1);
 
             }
