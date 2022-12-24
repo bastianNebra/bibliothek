@@ -7,10 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.transition.Hold;
 
 import java.util.ArrayList;
 
@@ -46,10 +49,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(@NonNull CustomAdapter.MyViewHolder holder, int position) {
-        holder.book_id_txt.setText(String.valueOf(book_id.get(holder.getAdapterPosition())));
-        holder.book_title_txt.setText(String.valueOf(book_title.get(holder.getAdapterPosition())));
-        holder.book_author_txt.setText(String.valueOf(book_author.get(holder.getAdapterPosition())));
-        holder.book_pages_txt.setText(String.valueOf(book_pages.get(holder.getAdapterPosition())));
+        holder.book_id_txt.setText(String.valueOf(book_id.get(position)));
+        holder.book_title_txt.setText(String.valueOf(book_title.get(position)));
+        holder.book_author_txt.setText(String.valueOf(book_author.get(position)));
+        holder.book_pages_txt.setText(String.valueOf(book_pages.get(position)));
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,6 +63,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                 intent.putExtra("author", String.valueOf((book_author.get(holder.getAdapterPosition()))));
                 intent.putExtra("pages", String.valueOf((book_pages.get(holder.getAdapterPosition()))));
                 activity.startActivityForResult(intent, 1);
+                Toast.makeText(context,""+holder.getAdapterPosition(),Toast.LENGTH_SHORT).show();
 
             }
         });

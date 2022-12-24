@@ -43,23 +43,21 @@ public class MeinDatenBankManager extends SQLiteOpenHelper {
         onCreate(db);
 
     }
-    void fügBuchEin(String title, String author, int pages){
+    void fuegBuchEin(String title, String author, int pages){
         SQLiteDatabase db=this.getWritableDatabase();
-        ContentValues cv = new ContentValues();
+       final ContentValues cv = new ContentValues();
         cv.put(SPALTE_TITEL,title );
         cv.put(SPALTE_AUTHOR,author );
         cv.put(SPALTE_SEITE,pages );
-        long result= db.insert(TABELLE_NAME, null, cv);
-        // Daten wurden nicht hinzugefugt
+       long erg= db.insert(TABELLE_NAME, null, cv);
 
-        if( result == -1){
-            Toast.makeText(context," Das Buch Wurde nicht Hinzugefuegt", Toast.LENGTH_SHORT).show();
+        System.out.println("Erg = " + erg);
 
-        }
-        else{
-            Toast.makeText(context," Das Buch Wurde  Hinzugefuegt", Toast.LENGTH_SHORT).show();
+       if(erg == 1){
+           Toast.makeText(context,"Data inserted", Toast.LENGTH_LONG).show();
+       }
 
-        }
+
 
     }
 

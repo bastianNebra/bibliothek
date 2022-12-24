@@ -23,9 +23,10 @@ public class EinfuegenActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 MeinDatenBankManager myDB = new MeinDatenBankManager(EinfuegenActivity.this);
-                myDB.fügBuchEin(title_input.getText().toString().trim(),
+                myDB.fuegBuchEin(title_input.getText().toString().trim(),
                         author_input.getText().toString().trim(),
                         Integer.valueOf(pages_input.getText().toString().trim()));
+                finish();
             }
         });
     }
